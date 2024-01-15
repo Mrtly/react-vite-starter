@@ -1,7 +1,7 @@
 ## React + Vite + TypeScript starter
 
-with TS, eslint, & prettier configs
+set up with router, TS, Tailwind, eslint & prettier configs
 
 <hr/>
 
-🥳
+🪄

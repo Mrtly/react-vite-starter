@@ -1,21 +1,33 @@
-import { useState } from "react";
-import { Button } from "@/components";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  RouteObject,
+} from "react-router-dom";
+import Home from "./pages/Home.tsx";
+import NotFound from "./pages/NotFound.tsx";
+import Example from "./pages/Example.tsx";
+import Layout from "./Layout.tsx";
 
-function App() {
-  const [count, setCount] = useState<number>(0);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    id: "home",
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/example",
+    element: <Example />,
+    id: "example",
+  },
+] satisfies RouteObject[]);
 
+const App = () => {
   return (
-    <div className="min-h-screen w-full bg-slate-100 p-6">
-      <div className="mt-10 flex flex-col items-center gap-10 text-center">
-        <h1 className="text-3xl font-semibold text-teal-900">
-          React + Vite + TS starter
-        </h1>
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-      </div>
-    </div>
+    <Layout>
+      <RouterProvider router={router} />{" "}
+    </Layout>
   );
-}
+};
 
 export default App;
