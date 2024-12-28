@@ -1,7 +1,7 @@
-## React + Vite + TypeScript starter
+### React on Vite with TypeScript starter template
 
-set up with router, TS, Tailwind, eslint & prettier configs
+set up with a router & important basic configs (ts, tailwind, eslint, prettier)
 
 <hr/>
 
-🪄
+enjoy 🪄

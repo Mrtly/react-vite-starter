@@ -7,10 +7,10 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button = ({ className, children, ...props }: ButtonProps) => {
   const buttonStyles = cn(
-    "text-md w-fit cursor-pointer rounded px-4 py-2",
-    "bg-gray-900 tracking-wider text-white shadow",
+    "text-base w-fit cursor-pointer rounded px-4 py-2",
+    "bg-gray-700 tracking-wider text-white shadow",
     "transition-all duration-200 hover:bg-gray-800 active:scale-[.98]",
-    className
+    className,
   );
 
   return (
