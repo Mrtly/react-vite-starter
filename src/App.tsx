@@ -1,32 +1,25 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  RouteObject,
-} from "react-router-dom";
-import Home from "./pages/Home.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Example from "./pages/Example.tsx";
+import { RouterProvider } from "react-router-dom";
 import Layout from "./Layout.tsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    id: "home",
-    errorElement: <NotFound />,
-  },
-  {
-    path: "/example",
-    element: <Example />,
-    id: "example",
-  },
-] satisfies RouteObject[]);
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
+import { ThemeProvider } from "next-themes";
+import router from "./router.tsx";
 
 const App = () => {
   return (
-    <Layout>
-      <RouterProvider router={router} />{" "}
-    </Layout>
+    <ThemeProvider attribute="class">
+      <Theme
+        accentColor="indigo"
+        grayColor="gray"
+        panelBackground="solid"
+        scaling="100%"
+      >
+        <Layout>
+          <RouterProvider router={router} />
+        </Layout>
+      </Theme>
+    </ThemeProvider>
   );
 };
 

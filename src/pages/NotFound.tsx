@@ -1,5 +1,5 @@
-import { Link } from "@/components/Link";
 import { useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { Link } from "@radix-ui/themes";
 
 const NotFound = () => {
   const error = useRouteError();

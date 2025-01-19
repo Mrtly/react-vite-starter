@@ -1,16 +1,20 @@
 import { useState } from "react";
-import { Button } from "@/components";
-import { Link } from "@/components/Link";
+import { Button, Link } from "@radix-ui/themes";
 
 const Home = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
     <div className="flex flex-col gap-10">
-      <Button onClick={() => setCount((count) => count + 1)}>
+      <Button
+        className="w-fit cursor-pointer"
+        onClick={() => setCount((count) => count + 1)}
+      >
         count is {count}
       </Button>
-      <Link href="/example">Example page</Link>
+      <Link className="w-fit" href="/example">
+        Example page
+      </Link>
     </div>
   );
 };
