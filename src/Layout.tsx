@@ -1,8 +1,8 @@
-import { Link } from "@radix-ui/themes";
+import { Link } from "@radix-ui/themes"
 
 type LayoutProps = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 const Layout = ({ children }: LayoutProps) => {
   return (
@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
       <main className="p-6 min-h-[calc(100vh-80px)] w-screen">{children}</main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

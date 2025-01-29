@@ -1,8 +1,6 @@
-### React on Vite with TypeScript - starter template
+### React on Vite with Tanstack Router, Typescript - starter template
 
-set up with React Router,
-
-Vitest & React Testing-Library,
+Vitest & React Testing Library,
 
 Radix Themes, Tailwind,
 

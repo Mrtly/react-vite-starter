@@ -1,4 +1,5 @@
-import { Link, Heading } from "@radix-ui/themes";
+import { Link, Heading } from "@radix-ui/themes"
+import { createFileRoute } from "@tanstack/react-router"
 
 const Example = () => {
   return (
@@ -8,7 +9,11 @@ const Example = () => {
       </Heading>
       <Link href="/">Home</Link>
     </div>
-  );
-};
+  )
+}
 
-export default Example;
+export { Example }
+
+export const Route = createFileRoute("/example")({
+  component: Example,
+})
